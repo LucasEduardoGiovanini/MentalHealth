@@ -6,34 +6,65 @@
     <script src="../Javascript/jquery.js"></script>
     <script type="text/javascript" src="../Javascript/login.js"></script>
     <script src="../Javascript/loadMail.js?"></script>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<title>Mental Health</title>
 </head>
 
 <body>
 	
-	<div id="fundo">            <!-- barra azul do topo -->
-		<div id = "barraPesquisa">	
-        <table>
-
+	<div id="topo">            <!--barra cinza do topo -->
+		<div id = "barra">	
+        	<table>
 				<tr>
 
-					<td><div id = "titulo">Mental Health</div></td>
-					<td> <input type="text" placeholder="Pesquisar"> </td>
-					<td><button>Início</button></td>
+					<td><div id = "titulo">Mental Health</div></td>      
+					<td> <input id = "pesquisa" type="text" placeholder="Pesquisar"> </td>
+					<td><button>Início</button></td>							<!--titulo, botões.pesquisa -->
+					<td><button>Artigos</button></td>                                    
 					<td><button>Sobre</button></td>
-					<td><button>Contato</button></td>
-					<td id="user">
-						<button id="logout"><img src="../Imagens/logout.png" alt=""></button> <!-- manda para login -->
-						joão das couves
-					</td>
+
 					<td>
-						<div for="" id="usuario"></div>
+						<div class = dropdown id = "right_side">      <!--usuário -->
+							<button>
+								<table id="user">
+									<tr>
+										<td>Usuário</td>
+										<td><img id = "account_img" src="../Imagens/account.png" alt=""></td>
+									</tr>
+								</table>
+								<div class="dropdown-content">    <!--barra de opções -->
+									<a href="">Favoritos</a>
+									<a href="">Configurações</a>
+									<a href="">Logout</a>
+								</div>
+							</button>
+						</div>
 					</td>
 				</tr>
+			</table>
+		</div>	
+		<div id = "frase">Frase impactante</div>
+	</div>
+	<div id = "div_texto">
+		<table>
+			<tr id = "titulo_texto">
 				
+				<td>Entenda o lado de alguém que passou por uma situação de desespero e tentou se suicidar.</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/WcSUs9iZv-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+				</td>
+				<td id = "texto">
+					Sabemos que o Brasil é o país com maior prevalência de pessoas depressivas na América Latina. Além disso, 
+					também é o quinto país com maior índice de depressão no mundo.A depressão é um distúrbio que afeta mais de 
+					10% da população mundial. Segundo dados da Organização Mundial da Saúde (OMS), o Brasil possui cerca de 5,8% 
+					de sua população já diagnosticada com depressão.
+				</td>
+			</tr>
 		</table>
-	</div>	
-    </div>
+	</div>
 	
 </body>
 
