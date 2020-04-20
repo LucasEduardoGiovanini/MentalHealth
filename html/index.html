@@ -1,66 +1,73 @@
 <html>
 
 <head>
-    <meta http-equiv="Cache-control" content="no-cache">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <script src="../Javascript/jquery.js"></script>
-    <script type="text/javascript" src="../Javascript/login.js"></script>
-    <script src="../Javascript/loadMail.js?"></script>
+	<meta http-equiv="Cache-control" content="no-cache">
+	
+	<link rel="stylesheet" href="../css/estilos.css">   <!--estilo padrão -->
+	<link rel="stylesheet" href="../css/inicio.css">
+
+    <script src="../javascript/jquery.js"></script>
+    <script type="text/javascript" src="../javascript/todos.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Mental Health</title>
 </head>
 
 <body>
 	
-	<div id="topo">            <!--barra cinza do topo -->
-		<div id = "barra">	
-        	<table>
-				<tr>
+	           
+	<div id = "barra">	<!--barra cinza do topo -->
+		<table>
+			<tr>
 
-					<td><div id = "titulo">Mental Health</div></td>      
-					<td> <input id = "pesquisa" type="text" placeholder="Pesquisar"> </td>
-					<td><button>Início</button></td>							<!--titulo, botões.pesquisa -->
-					<td><button>Artigos</button></td>                                    
-					<td><button>Sobre</button></td>
+				<td><div id = "titulo">Mental Health</div></td>      
+				<td> <input id = "pesquisa" type="text" placeholder="Pesquisar"> </td>
+				<td><button id = "inicio">Início</button></td>							<!--titulo, botões.pesquisa -->
+				<td><button>Artigos</button></td>                                    
+				<td><button id = "sobre">Sobre</button></td>
 
-					<td>
-						<div class = dropdown id = "right_side">      <!--usuário -->
-							<button>
-								<table id="user">
-									<tr>
-										<td>Usuário</td>
-										<td><img id = "account_img" src="../Imagens/account.png" alt=""></td>
-									</tr>
-								</table>
-								<div class="dropdown-content">    <!--barra de opções -->
-									<a href="">Favoritos</a>
-									<a href="">Configurações</a>
-									<a href="">Logout</a>
-								</div>
-							</button>
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>	
-		<div id = "frase">Frase impactante</div>
+				<td>
+					<div class = dropdown id = "right_side">      <!--usuário -->
+						<button>
+							<table id="user">
+								<tr>
+									<td>Usuário</td>
+									<td><img id = "account_img" src="../Imagens/account.png" alt=""></td>
+								</tr>
+							</table>
+							<div class="dropdown-content">    <!--barra de opções -->
+								<a href="">Favoritos</a>
+								<a href="">Configurações</a>
+								<a href="">Logout</a>
+							</div>
+						</button>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>	
+	
+	<div id="img_topo"> 
+		<div id = "texto_img"></div>
 	</div>
+
+	
 	<div id = "div_texto">
 		<table>
 			<tr id = "titulo_texto">
-				
-				<td>Entenda o lado de alguém que passou por uma situação de desespero e tentou se suicidar.</td>
-				<td></td>
+				<td>Entenda o lado de alguém que tentou se suicidar.</td>
+				<td  rowspan = "2" id = "texto">
+					Sabemos que o Brasil é o país com maior prevalência de pessoas depressivas na América Latina. Além disso, 
+					também é o quinto país com maior índice de depressão no mundo.A depressão é um distúrbio que afeta mais de 
+					10% da população mundial. Segundo dados da Organização Mundial da Saúde (OMS), o Brasil possui cerca de 5,8% 
+					de sua população já diagnosticada com depressão.Cerca de 12 milhões de pessoas sofrem com o mal.
+					Novos dados revelam que 23% dos adolescentes entre 13 e 17 anos enxergam o transtorno mental como 
+					um “momento de tristeza” e não uma doença grave, revela pesquisa realizada pelo Ibope.
+				</td>
 			</tr>
 			<tr>
 				<td>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/WcSUs9iZv-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-				</td>
-				<td id = "texto">
-					Sabemos que o Brasil é o país com maior prevalência de pessoas depressivas na América Latina. Além disso, 
-					também é o quinto país com maior índice de depressão no mundo.A depressão é um distúrbio que afeta mais de 
-					10% da população mundial. Segundo dados da Organização Mundial da Saúde (OMS), o Brasil possui cerca de 5,8% 
-					de sua população já diagnosticada com depressão.
 				</td>
 			</tr>
 		</table>

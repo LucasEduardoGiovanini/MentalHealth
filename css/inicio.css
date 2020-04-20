@@ -1,0 +1,28 @@
+
+#div_texto{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+}
+
+
+#titulo_texto{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: left;
+    text-align: justify;
+   
+}
+
+#texto{
+    padding-left: 100px;
+    text-align: justify;
+    text-justify: inter-word;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+}
