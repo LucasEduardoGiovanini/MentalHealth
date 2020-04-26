@@ -4,9 +4,11 @@
 	<meta http-equiv="Cache-control" content="no-cache">
 	
 	<link rel="stylesheet" href="../css/estilos.css">   <!--estilo padrão -->
-	<link rel="stylesheet" href="../css/inicio.css">
+	<link rel="stylesheet alternate" href="../css/inicio.css" id = "css_inicio">
+	<link rel="stylesheet alternate" href="../css/sobre.css" id = "css_sobre">
+	<link rel="stylesheet" href="../css/artigo.css" id = "css_sobre">
 
-    <script src="../javascript/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="../javascript/todos.js"></script>
 
 	<meta charset="UTF-8">
@@ -14,8 +16,7 @@
 </head>
 
 <body>
-	
-	           
+
 	<div id = "barra">	<!--barra cinza do topo -->
 		<table>
 			<tr>
@@ -23,7 +24,7 @@
 				<td><div id = "titulo">Mental Health</div></td>      
 				<td> <input id = "pesquisa" type="text" placeholder="Pesquisar"> </td>
 				<td><button id = "inicio">Início</button></td>							<!--titulo, botões.pesquisa -->
-				<td><button>Artigos</button></td>                                    
+				<td><button id = "artigos">Artigos</button></td>                                    
 				<td><button id = "sobre">Sobre</button></td>
 
 				<td>
@@ -48,35 +49,41 @@
 	</div>	
 	
 	<div id="img_topo"> 
-		<div id = "texto_img">Fique neném</div>
+		<div id = "texto_img" ></div>
 	</div>
-
 	
 	<div id = "div_texto">
-		<table>
-			<tr id = "titulo_texto">
-				<td>Entenda o lado de alguém que tentou se suicidar.</td>
-				<td  rowspan = "2" id = "texto">
-					<div id = "borda_texto">
+	<div id = "novo" ></div>
+		<div id = "caixa_cinza">
+			<table align = "center">
+				<tr>
+					<td id = "titulo_artigo">Sucesso de venda e mídia</td>
+				</tr>
+				<tr>
+					<td id = "autor_artigo">Jacinto Pinto</td>
+				</tr>
+				<tr>
+					<td id = "corpo_artigo">Veículos de Argentina, Peru, Espanha e Portugal também repercutem 
+						liberação de marca para produção independente. Autônomos e comerciantes celebram retorno financeiro 
+						Em clipping, o departamento de comunicação rubro-negro catalogou notícias em Argentina, Espanha,
+						 Portugal, Peru e Japão elogiando a iniciativa. Além disso, o vídeo de divulgação foi produzido 
+						 com legendas em três idiomas: inglês, espanhol e turco.
+						O uso oficial da marca Flamengo em máscaras de proteção está liberado para produção artesanal
+						 por 120 dias para pessoas físicas e pequenas empresas, com rendimento anual inferior a R$ 180 mil
+						 . O clube incentiva ainda a exposição em redes sociais para divulgação das mais criativas.
+					</td>
+				</tr>
+			</table>
 
-					
-					<div id = "caixa_texto">
-					Sabemos que o Brasil é o país com maior prevalência de pessoas depressivas na América Latina. Além disso, 
-					também é o quinto país com maior índice de depressão no mundo.A depressão é um distúrbio que afeta mais de 
-					10% da população mundial. Segundo dados da Organização Mundial da Saúde (OMS), o Brasil possui cerca de 5,8% 
-					de sua população já diagnosticada com depressão.Cerca de 12 milhões de pessoas sofrem com o mal.
-					Novos dados revelam que 23% dos adolescentes entre 13 e 17 anos enxergam o transtorno mental como 
-					um “momento de tristeza” e não uma doença grave, revela pesquisa realizada pelo Ibope.
-					</div>
-				</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/WcSUs9iZv-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-				</td>
-			</tr>
-		</table>
+
+
+
+
+		</div>
+	</div>
+	
+
+	<div id = "barra_fim">
 	</div>
 	
 </body>

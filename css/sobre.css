@@ -1,3 +1,49 @@
 #div_texto{
-    font-size: 300px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
+
+#table_sobre{
+    border-spacing: 40px;
+}
+
+#titulo_sobre{
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.line{
+    border-spacing: 30px;
+}
+
+.line_title{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+.line_text{
+    text-align: center;
+    font-size: 35px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 0 0 5px black;
+    stroke: black;
+ 
+}
+
+#fim{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-shadow: 0 0 5px black;
+    stroke: black;
 }

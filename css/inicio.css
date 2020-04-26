@@ -1,13 +1,3 @@
-
-#div_texto{
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-}
-
-
 #titulo_texto{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 40px;
@@ -17,6 +7,13 @@
    
 }
 
+#div_texto{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+}
 
 #texto{
     
@@ -26,18 +23,17 @@
     font-family: Arial, sans-serif;
     font-size: 23px;
     color: white;
-
+    text-shadow: 0 0 5px black;
+    stroke: black;
 }
 
-#borda_texto{
-    padding:5px;
-    background-color: rgba(0, 0, 0, 0.329);
-    
+
+@keyframes first{
+    from {opacity :1;}
+    to {opacity :0;}
 }
 
-#caixa_texto{
-    background-color:rgba(255, 255, 255, 0.123);
-    padding: 20px;
-    border-radius:20px solid black;
-    
+@keyframes second{
+    from {opacity :0;}
+    to {opacity :1;}
 }

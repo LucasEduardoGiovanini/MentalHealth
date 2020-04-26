@@ -1,0 +1,33 @@
+#div_texto{
+    position: absolute;
+    top: 95%;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+}
+
+#titulo_artigo{
+    font-size: 80px;
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+
+#autor_artigo{
+    font-size: 40px;
+    text-align: justify;
+    padding-bottom: 20px;
+}
+
+#corpo_artigo{
+    font-size: 30px;
+    text-align: justify;
+}
+
+#caixa_cinza{
+    background-color: rgba(233, 230, 230, 0.767);
+    padding: 50px;
+    
+    
+    
+}
