@@ -1,6 +1,6 @@
 #div_texto{
     position: absolute;
-    top: 115%;
+    top: 120%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 85%;
@@ -13,11 +13,6 @@
 #titulo_sobre{
     font-size: 70px;
     font-weight: bold;
-}
-
-#texto_sobre{
-    font-size: 40px;
-    text-align: center;
 }
 
 .line{
