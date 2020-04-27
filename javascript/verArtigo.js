@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $.ajax({
       type: "POST",
       dataType: "json",
@@ -6,7 +7,6 @@ $(document).ready(function () {
       data: {id: 2 },
       
       success: function (retorno) {
-        console.log("MANO ENTRO");
           mostrar(retorno.titulo, retorno.conteudo,retorno.autores);
           
       }

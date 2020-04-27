@@ -16,7 +16,7 @@ while ($arquivo = $diretorio->read()) {
         $tags = $xml_objeto->dadosconteudo->tags;
         $titulo = $xml_objeto->dadosconteudo->titulo;
         if($id == $_POST['id']){
-
+        
         $resposta["titulo"] = strval($titulo);    // cria a matriz de retorno
         $resposta["conteudo"] = strval($conteudo);
         $resposta["autores"]  = strval($autores);

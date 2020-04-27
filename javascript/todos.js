@@ -31,9 +31,11 @@ $(document).ready(function () {
         disableStylesheet(document.getElementById("css_sobre"));
         disableStylesheet(document.getElementById("css_inicio"));
         $("#div_texto").load("artigos.html");
-        enableScript(document.getElementById("js_artigo"));
+        addScript();
       }, 800);
       
+        
+
     });
 
     setTimeout(changeText, 500);
@@ -68,13 +70,12 @@ function disableStylesheet (node) {
   node.rel = 'alternate stylesheet';
 }
 
-function enableScript (node) {
-  node.type = 'text/javascript';
-}
 
-
-function disableScript (node) {
-  node.type = 'text/javascript alternate';
+function addScript(){
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "../javascript/verArtigo.js"; 
+  document.getElementsByTagName("head")[0].appendChild(script);
 }
 
 var texts = new Array();
