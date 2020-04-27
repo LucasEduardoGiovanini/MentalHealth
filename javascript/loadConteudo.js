@@ -21,10 +21,10 @@ $(document).ready(function () {
 
   });
 
-  function criar(titulo, conteudo, assunto, dataenvio) { // para criacao de novos conteudos 
+  function criar(titulo, id, conteudo, assunto, dataenvio) { // para criacao de novos conteudos 
     $("#emails").append("<tr><td><div class = \"LinhaEmail\" cellspacing =\"100\"><table><tr><td><img class = \"perfil\" src=\"http://localhost/Projeto_Email/Imagens/ImgPerfil.png\" alt=\"\"></td><td class = \"E1\">" + email + "</td><td class = \"E2\"><b>Assunto: </b>" + assunto + "</td><td class = \"E3\"><b>Data: </b>" + dataenvio + " -- " + conteudo + "</td></tr></table></div></td></tr>");
-
   }
 
+    
 
 });
