@@ -1,13 +1,11 @@
 <?php
-$caminho = "../Conteudo/";
+$caminho = "../conteudo/";
 $diretorio = dir($caminho);
 $resposta;
 
-
 while ($arquivo = $diretorio->read()) {
-    if ($arquivo != ".." && $arquivo != ".") {
-        //echo $arquivo."<br>";
-        $xml_string = file_get_contents($caminho . $arquivo);
+    if ($arquivo != ".." && $arquivo != ".") {        
+        $xml_string = file_get_contents($caminho.$arquivo);
         $xml_objeto = simplexml_load_string($xml_string);
         $conteudo = $xml_objeto->dadosconteudo->conteudo;
         $id = $xml_objeto->dadosconteudo->id;
@@ -18,6 +16,7 @@ while ($arquivo = $diretorio->read()) {
         $tags = $xml_objeto->dadosconteudo->tags;
         $titulo = $xml_objeto->dadosconteudo->titulo;
         if($id == $_POST['id']){
+
         $resposta["titulo"] = strval($titulo);    // cria a matriz de retorno
         $resposta["conteudo"] = strval($conteudo);
         $resposta["autores"]  = strval($autores);
@@ -29,3 +28,4 @@ while ($arquivo = $diretorio->read()) {
 $diretorio->close();
 
 echo json_encode($resposta);
+?>

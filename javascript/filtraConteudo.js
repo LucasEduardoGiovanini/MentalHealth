@@ -14,8 +14,7 @@ $(document).ready(function () {
         for ($i=0;$i<todos_conteudos.length;$i++){
 
             lista_id.push(todos_conteudos[$i].id)//conjunto de tags de x publicação ocupa x posicação na minha lista
-            lista_similaridades.push(LevenshteinDistance(barra_pesquisa,todos_conteudos[$i].tags)) //armazeno na minha lista a similaridade entre a tag daquela publicação como texto dado pelo usuário.
-            
+            lista_similaridades.push(LevenshteinDistance(barra_pesquisa,todos_conteudos[$i].tags)) //armazeno na minha lista a similaridade entre a tag daquela publicação como texto dado pelo usuário.         
         } 
 
         //agora busca-se com a variavel "valores_separados_de_pesquisa" a maior similaridade dentro da lista "lista_counteudos".
