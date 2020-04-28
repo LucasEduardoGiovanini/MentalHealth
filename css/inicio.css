@@ -9,7 +9,7 @@
 
 #div_texto{
     position: absolute;
-    top: 85%;
+    top: 155%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 85%;
@@ -26,6 +26,24 @@
     text-shadow: 0 0 5px black;
     stroke: black;
 }
+
+
+#video_1{
+    padding-top: 40px;
+   padding-left:100px;
+}
+
+#Video_center{
+    text-align: center;
+}
+
+#titulo_center{
+    text-align: center;
+     font-size: 60px;
+     color: black;
+
+}
+
 
 
 @keyframes first{

@@ -188,3 +188,24 @@ body{
     background-color:rgba(0, 0, 0, 0.199);
     padding: 10px;
 }
+
+#caixa_texto{
+    background-color:rgba(0, 0, 0, 0.199);
+    padding: 10px;
+}
+
+#caixa_texto_2{
+    margin-left: -100px;
+    width: 700px;
+    background-color:rgba(0, 0, 0, 0.199);
+    padding: 20px;
+    margin-top: 20px;   
+}
+
+#caixa_texto_3{
+    margin: auto;
+    width: 1300px;
+    background-color:rgba(0, 0, 0, 0.199);
+    padding: 20px;
+    margin-top: 20px;
+}
