@@ -1,8 +1,8 @@
 <?php
-$caminho = "../Conteudo/";
+$caminho = "../conteudo/";
 $diretorio = dir($caminho);
 
-$qnt_emails = count(glob($caminho . "*"));  // 
+$qnt_conteudos = count(glob($caminho . "*"));  // 
 $resposta;
 $resposta[0]["qnt"] = $qnt_conteudos;
 $contador = 1;
@@ -10,7 +10,7 @@ $contador = 1;
 
 while ($arquivo = $diretorio->read()) {
     if ($arquivo != ".." && $arquivo != ".") {
-        echo $arquivo."<br>";
+        //echo $arquivo."<br>";
         $xml_string = file_get_contents($caminho . $arquivo);
         $xml_objeto = simplexml_load_string($xml_string);
 

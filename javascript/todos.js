@@ -37,8 +37,9 @@ $(document).ready(function () {
         disableStylesheet(document.getElementById("css_sobre"));
         disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_inicio"));
-        $("#div_texto").load("pagArtigos.html");
+        $("#div_texto").html(" ");
         addScript();
+
         
       }, 800);
 
@@ -78,10 +79,17 @@ function disableStylesheet (node) {
 
 
 function addScript(){
+
+  var script2 = document.createElement("script");
+  script2.type = "text/javascript";
+  script2.src = "../javascript/loadConteudo.js"; 
+  document.getElementsByTagName("head")[0].appendChild(script2);
+
   var script = document.createElement("script");
   script.type = "text/javascript";
   script.src = "../javascript/verArtigo.js"; 
   document.getElementsByTagName("head")[0].appendChild(script);
+
 }
 
 var texts = new Array();
