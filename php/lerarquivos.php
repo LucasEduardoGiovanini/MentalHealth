@@ -10,24 +10,19 @@ $contador = 1;
 
 while ($arquivo = $diretorio->read()) {
     if ($arquivo != ".." && $arquivo != ".") {
-        //echo $arquivo."<br>";
+        echo $arquivo."<br>";
         $xml_string = file_get_contents($caminho . $arquivo);
         $xml_objeto = simplexml_load_string($xml_string);
-        $conteudo = $xml_objeto->dadosconteudo->conteudo;
-        $assunto = $xml_objeto->dadosconteudo->assunto;
-        $local_desenvolvimento = $xml_objeto->dadosconteudo->local_desenvolvimento;
+
+        $id = $xml_objeto->dadosconteudo->id;
         $autores = $xml_objeto->dadosconteudo->autores;
-        $dataenvio = $xml_objeto->dadosconteudo->dataenvio;
-        $tags = $xml_objeto->dadosconteudo->tags;
+        $descricao = $xml_objeto->dadosconteudo->descricao;
         $titulo = $xml_objeto->dadosconteudo->titulo;
 
         $resposta[$contador]["titulo"] = strval($titulo);    // cria a matriz de retorno
-        $resposta[$contador]["conteudo"] = strval($conteudo);
-        $resposta[$contador]["assunto"]  = strval($assunto);
-        $resposta[$contador]["dataenvio"]  = strval($dataenvio);
-        $resposta[$contador]["tags"]  = strval($tags);
-        $resposta[$contador]["local_desenvolvimento"]  = strval($local_desenvolvimento);
+        $resposta[$contador]["id"]  = strval($id);
         $resposta[$contador]["autores"]  = strval($autores);
+        $resposta[$contador]["descricao"]  = strval($descricao);
         $contador++;
     }
 }

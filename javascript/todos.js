@@ -11,6 +11,7 @@ $(document).ready(function () {
         enableStylesheet(document.getElementById("css_sobre"));
         disableStylesheet(document.getElementById("css_inicio"));
         disableStylesheet(document.getElementById("css_artigo"));
+        disableStylesheet(document.getElementById("css_pagArtigos"));
       $("#div_texto").load("sobre.html");    
     }, 800);  
     });  
@@ -22,31 +23,33 @@ $(document).ready(function () {
         enableStylesheet(document.getElementById("css_inicio"));
         disableStylesheet(document.getElementById("css_sobre"));
         disableStylesheet(document.getElementById("css_artigo"));
+        disableStylesheet(document.getElementById("css_pagArtigos"));
        
         $("#div_texto").load("inicio.html");
             }, 800);
     });
 
-    $("#artigos").click(function () {
+    $("#artigos").click(function () { 
       document.body.scrollTop = 0;
       document.getElementById("novo").style.animation = "first ease 0.5s";
       setTimeout(function (){
-        enableStylesheet(document.getElementById("css_artigo"));
+        enableStylesheet(document.getElementById("css_pagArtigos"));
         disableStylesheet(document.getElementById("css_sobre"));
+        disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_inicio"));
-        $("#div_texto").load("artigos.html");
+        $("#div_texto").load("pagArtigos.html");
         addScript();
-      }, 800);
-      
         
+      }, 800);
 
     });
+
+    
 
     setTimeout(changeText, 500);
   });
 
 window.onscroll = function() {scrollFunction()};
-
 
 
 function scrollFunction() {
@@ -64,7 +67,6 @@ function scrollFunction() {
  
   }
 }
-
 
 function enableStylesheet (node) {
   node.rel = 'stylesheet';

@@ -43,3 +43,18 @@
     width: 25px;
     height: 45px;
 }
+
+.button_preview{
+    background: transparent;
+    border: none;
+    height: 100%;
+}
+
+.button_preview:hover{
+    cursor: pointer;
+    background-color: rgb(79, 79, 80);
+}
+
+.button_preview:focus{
+    outline:0;
+}
