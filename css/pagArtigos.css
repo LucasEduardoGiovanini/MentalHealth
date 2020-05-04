@@ -1,0 +1,45 @@
+#div_texto{
+    margin-top: 380px;
+}
+
+#Caixa_Artigo{
+    height: 300px;
+    width: 1000px;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color:rgb(60, 60, 61);
+    border-style: none;
+}
+
+#preview_artigo{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+#preview_artigo tr td{
+    padding: 15px;
+    color: lightgray;
+}
+
+#img_artigo{
+    background: url("../imagens/3.png") no-repeat center;
+    background-size: cover;
+    width: 30%;
+}
+#titulo_artigo{
+    height: 20%;
+    font-size: 35px;
+}
+#des_artigo{
+    width: 70%;
+    font-size: 25px;
+    vertical-align: top;
+}
+
+#seta{
+    width: 25px;
+    height: 45px;
+}

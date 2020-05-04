@@ -1,20 +1,19 @@
 #div_texto{
-    position: absolute;
-    top: 95%;   
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 380px;
+    margin-left: auto;
+    margin-right: auto;
     width: 75%;
 }
 
 #titulo_artigo{
-    font-size: 80px;
+    font-size: 50px;
     text-align: center;
     padding-bottom: 20px;
     
 }
 
 #autor_artigo{
-    font-size: 40px;
+    font-size: 35px;
     text-align: justify;
     padding-bottom: 20px;
 }

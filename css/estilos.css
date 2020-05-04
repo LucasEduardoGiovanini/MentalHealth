@@ -7,10 +7,10 @@ body{
     padding:0;
     background-image: url("../Imagens/bg.png");
     background-size: 250px;
-    height: 1200px;
 }
 
 #img_topo{
+    top: 0px;
     position: fixed;
     z-index: 998;
     background-image: url(" ../Imagens/girasol.png");
@@ -63,6 +63,7 @@ body{
 /* ========================== barra cinza do topo da página, com o logo, pesquisa, botões ================================*/
 
 #barra{
+    top: 0px;
     height: 70px;
     background-color: #1d1e22;
     box-shadow: 0 1px 15px rgb(0, 0, 0);
@@ -180,32 +181,11 @@ body{
     width: 100%;
     height: 30%;
     position: absolute;
-    bottom:-950;
+    bottom:-1650;
     
 }
 
 .caixa_texto{
     background-color:rgba(0, 0, 0, 0.199);
-    padding: 10px;
-}
-
-#caixa_texto{
-    background-color:rgba(0, 0, 0, 0.199);
-    padding: 10px;
-}
-
-#caixa_texto_2{
-    margin-left: -100px;
-    width: 700px;
-    background-color:rgba(0, 0, 0, 0.199);
     padding: 20px;
-    margin-top: 20px;   
-}
-
-#caixa_texto_3{
-    margin: auto;
-    width: 1300px;
-    background-color:rgba(0, 0, 0, 0.199);
-    padding: 20px;
-    margin-top: 20px;
 }

@@ -1,27 +1,25 @@
+#div_texto{
+    margin-top: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+
 #titulo_texto{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bolder;
     text-align: left;
     text-align: justify;
    
 }
 
-#div_texto{
-    position: absolute;
-    top: 155%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-}
-
-#texto{
-    
-    padding-left: 100px;
+.texto{
     text-align: justify;
     text-justify: inter-word;
     font-family: Arial, sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     color: white;
     text-shadow: 0 0 5px black;
     stroke: black;

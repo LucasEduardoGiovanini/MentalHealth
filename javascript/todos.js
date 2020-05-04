@@ -1,7 +1,7 @@
 $(document).ready(function () {
-
   $("#div_texto").load("inicio.html"); 
   enableStylesheet(document.getElementById("css_inicio"));
+  
 
     $("#sobre").click(function () {
       document.body.scrollTop = 0;
