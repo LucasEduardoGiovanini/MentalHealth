@@ -7,7 +7,7 @@ while ($arquivo = $diretorio->read()) {
     if ($arquivo != ".." && $arquivo != ".") {        
         $xml_string = file_get_contents($caminho.$arquivo);
         $xml_objeto = simplexml_load_string($xml_string);
-        $conteudo = $xml_objeto->dadosconteudo->conteudo;
+        $corpo = $xml_objeto->dadosconteudo->corpo;
         $id = $xml_objeto->dadosconteudo->id;
         $assunto = $xml_objeto->dadosconteudo->assunto;
         $local_desenvolvimento = $xml_objeto->dadosconteudo->local_desenvolvimento;
@@ -18,7 +18,7 @@ while ($arquivo = $diretorio->read()) {
         if($id == $_POST['id']){
         
         $resposta["titulo"] = strval($titulo);    // cria a matriz de retorno
-        $resposta["conteudo"] = strval($conteudo);
+        $resposta["corpo"] = strval($corpo);
         $resposta["autores"]  = strval($autores);
        
         }
