@@ -63,8 +63,6 @@ $(document).ready(function () {
 
     });
 
-    
-
     setTimeout(changeText, 500);
   });
 
@@ -75,13 +73,11 @@ function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     document.getElementById("texto_img").style.fontSize = "35px";
     document.getElementById("img_topo").style.height = "150px";
-    //document.getElementById("texto_img").style.transform = "translate(-35%, 0)";
     document.getElementById("texto_img").style.lineHeight = "220px";
     
   } else {
     document.getElementById("texto_img").style.fontSize = "70px";
     document.getElementById("img_topo").style.height = "330px";
-    //document.getElementById("texto_img").style.transform = "translate(0, 0)";
     document.getElementById("texto_img").style.lineHeight = "400px";
  
   }
@@ -94,7 +90,6 @@ function enableStylesheet (node) {
 function disableStylesheet (node) {
   node.rel = 'alternate stylesheet';
 }
-
 
 function addScript(){
 
@@ -109,9 +104,6 @@ function addScript(){
   script.src = "../javascript/verArtigo.js"; 
   document.getElementsByTagName("head")[0].appendChild(script);
   },500)  
-
-  
-
 }
 
 var texts = new Array();

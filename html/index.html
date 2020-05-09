@@ -15,6 +15,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../javascript/todos.js"></script>
+	<script type="text/javascript" src="../javascript/login.js"></script>
 
 	<meta charset="UTF-8">
 	<title>Mental Health</title>
@@ -30,43 +31,56 @@
 				<td><button id = "artigos">Artigos</button></td>                                    
 				<td><button id = "sobre">Sobre</button></td>
 
-				<td>
-					<div class = dropdown id = "right_side">      <!--usuário -->
-						<button>
-							<table id="user">
-								<tr>
-									<td>Usuário</td>
-									<td><img id = "account_img" src="../Imagens/account.png" alt=""></td>
-								</tr>
-							</table>
-							<div class="dropdown-content">    <!--barra de opções -->
-								<a href="">Favoritos</a>
-								<a id = "config">Configurações</a>
-								<a href="">Logout</a>
-							</div>
+				<td id = "account">
+					<div id = "right_side">      <!--usuário -->
+						<button  onclick="window.location.href='#popup1'" >
+							Login
 						</button>
-					</div>
 				</td>
 			</tr>
 		</table>
 	</div>	
 	
-	<div id="img_topo"> 
-		<div id = "texto_img" ></div>
-	</div>
-	
-	
-	<div id = "div_texto">
+<!--imagem do girassol -->
+<div id="img_topo"> 
+	<div id = "texto_img" ></div>
+</div>
+
+
+<!-- conteúdo principal da página -->
+<div id = "div_texto">
+
+</div>
+
+
+<!--barra escura no fim da página -->
+<div id = "barra_fim">
+
+</div> 
+
+
+<!-- popup de login -->
+<div id="popup1" class="overlay"> 
+	<div class="popup">
+		<h2>Login / Sign-in</h2>
+		<a class="close" href="#">&times;</a>
 		
-			
-			
+		<table id = "inputs_login">
+			<tr><td><div id = "warning"></div></td></tr>
+			<tr><td>
+				<input type="text" id = "username" placeholder="Usuário">
+			</td></tr>
+			<tr><td>
+				<input type="password" id = "password" placeholder="Senha">
+			</td></tr>
+			<tr><td>
+					<button>Cadastre-se</button>
+					<button id = "Blogin">Login</button>
+			</td></tr>
+		</table>
+		
 	</div>
-	
-
-	<div id = "barra_fim">
-
-	</div>
-	
+</div>
 </body>
 
 </html>

@@ -9,6 +9,8 @@ body{
     background-size: 250px;
 }
 
+/* ============ imagem do girassol ================= */
+
 #img_topo{
     top: 0px;
     position: fixed;
@@ -59,8 +61,7 @@ body{
 }
 
 
-
-/* ========================== barra cinza do topo da página, com o logo, pesquisa, botões ================================*/
+/* ========================== barra cinza do topo ================================*/
 
 #barra{
     top: 0px;
@@ -133,6 +134,8 @@ body{
     
 }
 
+/* ============ botão do usuário ================= */
+
 #account_img{
     height: 30px;
     padding-left: 10px;
@@ -170,11 +173,15 @@ body{
 .dropdown:hover .dropdown-content {display: block;}
 
 
+/* ============ desaparecer e aparecer ================= */
+
 #novo{
     opacity: 0;
     animation:second ease 0.5s ;
     animation-fill-mode: forwards;
 }
+
+/* ============ barra escura ================= */
 
 #barra_fim{
     background-color: rgba(0, 0, 0, 0.767);
@@ -188,4 +195,105 @@ body{
 .caixa_texto{
     background-color:rgba(0, 0, 0, 0.199);
     padding: 20px;
+}
+
+
+
+/* ============ login ===========*/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 25%;
+
+    position: fixed;
+    margin-top: 380px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: #06D85F;
+}
+
+@media screen and (max-width: 700px){
+    .popup{
+        width: 70%;
+    }
+  }
+
+#inputs_login{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#inputs_login tr td input{
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+#inputs_login tr td button{
+    background-color: rgb(153, 153, 153);
+    margin-top: 5px;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+#inputs_login tr td button:nth-child(1){
+    width: 60%;
+}
+#inputs_login tr td button:nth-child(2){
+    width: 38%;
+}
+
+#inputs_login tr td button:hover{
+    background-color: rgb(175, 175, 175);
+}
+
+#warning{
+   background-color: rgba(255, 0, 0, 0.575);
+   width: auto;
+   text-align: center;
+   font-family: Tahoma, Arial, sans-serif;
 }
