@@ -1,25 +1,23 @@
 $(document).ready(function () {
-    $("#Blogin").click(function () {
+    $("#Bcadastro").click(function () {
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "../php/login.php",
+            url: "../php/cadastro.php",
             data: {
                 loginxml: $("#username").val(),
                 senhaxml: $("#password").val()
             },
             success: function (retorno) {
                 $("#account").load("usuario.html");
-                $("#inputs_login").html("<h3>Login efetuado com sucesso!</h3>");
+                $("#inputs_login").html("<h3>Cadastro efetuado com sucesso!</h3>");
                 setTimeout(function (){ 
                     $("#nome_user").html(retorno);
                 }, 100); 
                 
             },
             error:function(){
-                var aux = parseInt($("#username").val(""));
-                var aux2 = parseInt($("#password").val(""));
-                $("#warning").html("<h3>Login ou senha incorretos!</h3>");
+                alert("Usuário já existe/inputs inválidos");
             }
 
         });

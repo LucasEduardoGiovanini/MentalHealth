@@ -11,7 +11,7 @@ foreach ($xml_objeto->user as $user) {
     $loginxml = $user->login;
     $senhaxml = $user->senha;
     if ($login == $loginxml && $senha == $senhaxml) {
-        echo json_encode("permitido!");
+        echo json_encode($login);
         break;
     }
 }
