@@ -46,7 +46,8 @@ $(document).ready(function () {
                 
             },
             error:function(){
-                var aux = parseInt($("#username").val(""));
+                var aux = parseInt($("#password").val(""));
+                
                 $("#warning").html("<h3>Login ou senha incorretos!</h3>");
                 $("#username").focus();
             }

@@ -27,7 +27,7 @@
 		<table>
 			<tr>
 				<td><div id = "titulo">Mental Health</div></td>      
-				<td> <input id = "pesquisa" type="text" placeholder="Pesquisar"> </td>
+				<td> <input id = "pesquisa" type="text" placeholder="Pesquisar" autocomplete="new-password"> </td>
 				<td><button id = "inicio">Início</button></td>							<!--titulo, botões.pesquisa -->
 				<td><button id = "artigos">Artigos</button></td>                                    
 				<td><button id = "sobre">Sobre</button></td>
@@ -69,10 +69,10 @@
 		<table id = "inputs_login">
 			<tr><td><div id = "warning"></div></td></tr>
 			<tr><td>
-				<input type="text" id = "username" placeholder="Usuário">
+				<input type="text" id = "username" autocomplete="username" placeholder="Usuário">
 			</td></tr>
 			<tr><td>
-				<input type="password" id = "password" placeholder="Senha">
+				<input type="password" id = "password" name='password' autocomplete="current-password" placeholder="Senha">
 			</td></tr>
 			<tr><td>
 					<button id = "Bcadastro">Cadastre-se</button>
@@ -80,6 +80,29 @@
 			</td></tr>
 			<tr align="center"><td>
 				<button id = "BloginAdmin">Login como Administrador</button>
+			</td></tr>
+		</table>
+		
+	</div>
+</div>
+
+
+<!-- popup de add login -->
+<div id="popup2" class="overlay"> 
+	<div class="popup">
+		<h2>Adicionar Conta de Admin</h2>
+		<a class="close" href="#">&times;</a>
+		
+		<table id = "Cinputs_login">
+			<tr><td><div id = "Cwarning"></div></td></tr>
+			<tr><td>
+				<input type="text" id = "Cusername" placeholder="Usuário">
+			</td></tr>
+			<tr><td>
+				<input type="password" id = "Cpassword" autocomplete="new-password" placeholder="Senha">
+			</td></tr>
+			<tr><td>
+					<button id = "CBcadastro">Cadastrar novo admin</button>
 			</td></tr>
 		</table>
 		

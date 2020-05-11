@@ -3,9 +3,8 @@
 $login = $_POST["loginxml"];
 $senha = password_hash($_POST["senhaxml"],PASSWORD_DEFAULT);
 
-$xml = simplexml_load_file("../LoginSenha.xml");
-$xmlAdmin = simplexml_load_file("../LoginSenhaAdmin.xml");
-
+$xml = simplexml_load_file("../LoginSenhaAdmin.xml");
+$xml2 = simplexml_load_file("../LoginSenha.xml");
 $var = TRUE;
 
 if (empty($login) || empty($senha)){
@@ -20,7 +19,7 @@ foreach ($xml->user as $user) {
     }
 }
 
-foreach ($xmlAdmin->user as $user) {
+foreach ($xml2->user as $user) {
     $loginxml = $user->login;
     if ($login == $loginxml) {
         $var = FALSE;
@@ -28,14 +27,13 @@ foreach ($xmlAdmin->user as $user) {
     }
 }
 
-
 if($var){
     $account = $xml->addChild("user");
 
     $account->addChild("login", $login);
     $account->addChild("senha", $senha);
     
-    $xml->asXML("../LoginSenha.xml");
+    $xml->asXML("../LoginSenhaAdmin.xml");
     
     echo json_encode($login);
 }

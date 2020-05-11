@@ -28,6 +28,7 @@ $(document).ready(function () {
         disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_pagArtigos"));
       $("#div_texto").load("insereArtigo.html");    
+      
     }, 800);  
     });  
 

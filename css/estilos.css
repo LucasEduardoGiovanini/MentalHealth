@@ -257,12 +257,12 @@ body{
     }
   }
 
-#inputs_login{
+#inputs_login, #Cinputs_login{
     margin-left:auto;
     margin-right:auto;
 }
 
-#username, #password,#usernameA, #passwordA{
+#username, #password,#usernameA, #passwordA, #Cusername,#Cpassword{
     padding: 12px 20px;
     margin: 4px 0;
     display: inline-block;
@@ -270,7 +270,7 @@ body{
     width: 250px;
 }
 
-#inputs_login tr td button{
+#inputs_login tr td button, #Cinputs_login tr td button{
     background-color: rgb(153, 153, 153);
     margin-top: 5px;
     color: white;
@@ -288,11 +288,16 @@ body{
     width: 38%;
 }
 
-#inputs_login tr td button:hover{
+#inputs_login tr td button:hover, #Cinputs_login tr td button:hover{
     background-color: rgb(175, 175, 175);
 }
 
-#warning{
+#CBcadastro{
+    width: 100%;
+    margin-right: 5px;
+}
+
+#warning, #Cwarning{
    background-color: rgba(255, 0, 0, 0.575);
    width: auto;
    text-align: center;
