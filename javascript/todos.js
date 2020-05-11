@@ -63,6 +63,13 @@ $(document).ready(function () {
 
     });
 
+    $("#account").click(function () { 
+      setTimeout(function (){
+          $("#username").focus();
+      }, 300);
+    });
+    
+    
     setTimeout(changeText, 500);
   });
 

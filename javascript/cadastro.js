@@ -18,6 +18,7 @@ $(document).ready(function () {
             },
             error:function(){
                 alert("Usuário já existe/inputs inválidos");
+                $("#username").focus();
             }
 
         });

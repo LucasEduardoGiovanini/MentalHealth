@@ -1,13 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dados>
-    <user>
-        <login>joao</login>
-        <senha>1234</senha>
-    </user>
-    <user>
-        <login>lucas</login>
-        <senha>4321</senha>
-    </user>
-
-
 </dados>

@@ -1,7 +1,7 @@
 <?php
 
 $login = $_POST["loginxml"];
-$senha = $_POST["senhaxml"];
+$senha = password_hash($_POST["senhaxml"],PASSWORD_DEFAULT);
 
 $xml = simplexml_load_file("../LoginSenha.xml");
 

@@ -262,7 +262,7 @@ body{
     margin-right:auto;
 }
 
-#inputs_login tr td input{
+#username, #password,#usernameA, #passwordA{
     padding: 12px 20px;
     margin: 4px 0;
     display: inline-block;
@@ -280,10 +280,11 @@ body{
     
 }
 
-#inputs_login tr td button:nth-child(1){
-    width: 60%;
+#Bcadastro{
+    width: 58%;
+    margin-right: 5px;
 }
-#inputs_login tr td button:nth-child(2){
+#Blogin{
     width: 38%;
 }
 
@@ -296,4 +297,9 @@ body{
    width: auto;
    text-align: center;
    font-family: Tahoma, Arial, sans-serif;
+}
+
+#BloginAdmin{
+    padding: 20px;
+    width: 100%;
 }
