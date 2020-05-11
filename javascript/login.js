@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $("#Blogin").click(function () {
         $.ajax({
             type: "POST",
@@ -43,6 +44,8 @@ $(document).ready(function () {
                 setTimeout(function (){ 
                     $("#nome_user").html(retorno);
                 }, 100); 
+                setTimeout(function (){ addScript2();}, 300); 
+                
                 
             },
             error:function(){
@@ -55,3 +58,14 @@ $(document).ready(function () {
         });
     })
 });
+
+
+function addScript2(){
+    setTimeout(function() {
+      var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "../javascript/addArtigo.js"; 
+    document.getElementsByTagName("head")[0].appendChild(script);
+    },500);
+
+  }

@@ -17,20 +17,8 @@ $(document).ready(function () {
     }, 800);  
     });  
 
-    $("#config").click(function () {
-      document.body.scrollTop = 0;
-      document.getElementById("novo").style.animation = "first ease 0.5s";
 
-      setTimeout(function (){
-        enableStylesheet(document.getElementById("css_insere_artigo"));
-        disableStylesheet(document.getElementById("css_sobre"));
-        disableStylesheet(document.getElementById("css_inicio"));
-        disableStylesheet(document.getElementById("css_artigo"));
-        disableStylesheet(document.getElementById("css_pagArtigos"));
-      $("#div_texto").load("insereArtigo.html");    
-      
-    }, 800);  
-    });  
+    
 
     $("#inicio").click(function () {
       document.body.scrollTop = 0;
@@ -69,6 +57,8 @@ $(document).ready(function () {
           $("#username").focus();
       }, 300);
     });
+
+    
     
     
     setTimeout(changeText, 500);
