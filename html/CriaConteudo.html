@@ -1,81 +1,93 @@
 <div id="novo">
-    <table>
-        <tr>
-            <td>
-                ID
-            </td>
-            <td>
-                <input type="text" id= "id">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Autor
-            </td>
-            <td>
-                <input type="text" id= "autores">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Título
-            </td>
-            <td>
-                <input type="text" id= "Atitulo">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Assunto
-            </td>
-            <td>
-                <input type="text" id= "assunto">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Descrição
-            </td>
-            <td>
-                <input type="text" id= "descricao">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Data De Envio
-            </td>
-            <td>
-                <input type="date" id= "dataenvio">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Corpo
-            </td>
-            <td>
-                <input type="text" id= "corpo">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Referencias
-            </td>
-            <td>
-                <input type="text" id= "referencias">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Tags
-            </td>
-            <td>
-                <input type="text" id= "tags">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <button id = "Bcriar">enviar</button>
-            </td>
-        </tr>
-    </table>
+    <div id="div_campos">
+
+        <table id="table_inputs">
+
+            <tr>
+                <td>
+                    ID
+                    <input type="text" id="id">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Descrição
+                </td>
+            </tr>
+
+            <tr>
+                <td rowspan="4">
+                    <textarea name="" id="descricao" cols="20" rows="10"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Data de envio
+                </td>
+                <td>
+                    <input type="date" id="dataenvio">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Autores
+                </td>
+                <td>
+                    <input type="text" id="autores">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Tags
+                </td>
+                <td>
+                    <input type="text" id="tags">
+                </td>   
+            </tr>
+
+            <tr>
+                <td>
+                    Título
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="Atitulo">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Corpo</td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <textarea name="" id="corpo" cols="30" rows="100"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Referências
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="referencias">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button id="Bcriar">enviar</button>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>

@@ -8,7 +8,6 @@ $(document).ready(function () {
     
           enableStylesheet(document.getElementById("cria_conteudo"));
           disableStylesheet(document.getElementById("css_pagArtigos"));
-          disableStylesheet(document.getElementById("css_insere_artigo"));
           disableStylesheet(document.getElementById("css_sobre"));
           disableStylesheet(document.getElementById("css_artigo"));
           disableStylesheet(document.getElementById("css_inicio"));

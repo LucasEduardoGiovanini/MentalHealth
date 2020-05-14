@@ -9,7 +9,6 @@ $(document).ready(function () {
 
       setTimeout(function (){
         enableStylesheet(document.getElementById("css_sobre"));
-        disableStylesheet(document.getElementById("css_insere_artigo"));
         disableStylesheet(document.getElementById("css_inicio"));
         disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_pagArtigos"));
@@ -26,7 +25,6 @@ $(document).ready(function () {
       setTimeout(function (){
         
         enableStylesheet(document.getElementById("css_inicio"));
-        disableStylesheet(document.getElementById("css_insere_artigo"));
         disableStylesheet(document.getElementById("css_sobre"));
         disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_pagArtigos"));
@@ -40,7 +38,6 @@ $(document).ready(function () {
       document.getElementById("novo").style.animation = "first ease 0.5s";
       setTimeout(function (){
         enableStylesheet(document.getElementById("css_pagArtigos"));
-        disableStylesheet(document.getElementById("css_insere_artigo"));
         disableStylesheet(document.getElementById("css_sobre"));
         disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_inicio"));

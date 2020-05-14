@@ -2,7 +2,6 @@
 $id = $_POST["id"];
 $autores = $_POST["autores"];
 $titulo = $_POST["Atitulo"];
-$assunto = $_POST["assunto"];
 $descricao = $_POST["descricao"];
 $dataenvio = $_POST["dataenvio"];
 $corpo = $_POST["corpo"];
@@ -16,7 +15,6 @@ $dadosconteudo_xml = $xml->createElement("dadosconteudo");
 $id_xml = $xml->createElement("id", $id);
 $autores_xml = $xml->createElement("autores", $autores);
 $titulo_xml = $xml->createElement("titulo", $titulo);
-$assunto_xml = $xml->createElement("assunto", $assunto);
 $descricao_xml = $xml->createElement("descricao", $descricao);
 $dataenvio_xml = $xml->createElement("dataenvio", $dataenvio);
 $corpo_xml = $xml->createElement("corpo", $corpo);
@@ -25,7 +23,7 @@ $tags_xml = $xml->createElement("tags", $tags);
 
 $variavel = TRUE;   
 
-if(empty($id)| empty($dataenvio) || empty($autores) || empty($titulo) || empty($assunto) || empty($descricao) || empty($corpo) || empty($referencias) || empty($tags)){
+if(empty($id)| empty($dataenvio) || empty($autores) || empty($titulo) || empty($descricao) || empty($corpo) || empty($referencias) || empty($tags)){
     $variavel = FALSE;
 }
 
@@ -34,7 +32,6 @@ if($variavel){
     $dadosconteudo_xml->appendChild($id_xml);
     $dadosconteudo_xml->appendChild($autores_xml);
     $dadosconteudo_xml->appendChild($titulo_xml);
-    $dadosconteudo_xml->appendChild($assunto_xml);
     $dadosconteudo_xml->appendChild($descricao_xml);
     $dadosconteudo_xml->appendChild($dataenvio_xml);
     $dadosconteudo_xml->appendChild($corpo_xml);
@@ -43,6 +40,11 @@ if($variavel){
 
     $conteudo_xml->appendChild($dadosconteudo_xml);
     $xml->appendChild($conteudo_xml);
+
+    if(file_exists("../conteudo/" . $id . ".xml")){
+        echo "sucesso";
+    }
+
     $xml->save("../conteudo/" . $id . ".xml");
 
     echo json_encode("sucesso");

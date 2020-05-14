@@ -8,7 +8,6 @@ $(document).ready(function () {
                 id: $("#id").val(),
                 autores: $("#autores").val(),
                 Atitulo: $("#Atitulo").val(),
-                assunto: $("#assunto").val(),
                 descricao: $("#descricao").val(),
                 dataenvio: $("#dataenvio").val(),
                 corpo: $("#corpo").val(),
@@ -20,7 +19,7 @@ $(document).ready(function () {
                 $("#artigos").click();
             },
             error:function(){
-                alert("Complete todos os campos.");
+                alert("Complete todos os campos / defina uma ID ainda não utilizada.");
             }
 
         });
