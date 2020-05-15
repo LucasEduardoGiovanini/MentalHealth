@@ -18,11 +18,13 @@ while ($arquivo = $diretorio->read()) {
         $autores = $xml_objeto->dadosconteudo->autores;
         $descricao = $xml_objeto->dadosconteudo->descricao;
         $titulo = $xml_objeto->dadosconteudo->titulo;
+        $tags = $xml_objeto->dadosconteudo->tags;
 
         $resposta[$contador]["titulo"] = strval($titulo);    // cria a matriz de retorno
         $resposta[$contador]["id"]  = strval($id);
         $resposta[$contador]["autores"]  = strval($autores);
         $resposta[$contador]["descricao"]  = strval($descricao);
+        $resposta[$contador]["tags"]  = strval($tags);
         $contador++;
     }
 }

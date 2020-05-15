@@ -35,7 +35,7 @@ $(document).ready(function () {
     $("#corpo_artigo").html(conteudo);
     $("#autor_artigo").html(autores);
     $("#data_artigo").html(data);
-    $("#id_artigo").html(id);
+    $("#id_artigo").html("Id:"+id);
     $("#tags_artigo").html(tags);
     $("#ref_artigo").html(referencias);
   

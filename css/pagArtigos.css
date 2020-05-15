@@ -7,7 +7,7 @@
     width: 1200px;
     margin-left: auto; 
     margin-right: auto; 
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 50px;
     background-color:rgb(60, 60, 61);
     border-style: none;
@@ -19,8 +19,10 @@
     border-collapse: collapse;
 }
 
+
 #preview_artigo tr td{
-    padding: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
     color: lightgray;
 }
 
@@ -30,13 +32,14 @@
     width: 30%;
 }
 #titulo_artigo{
-    height: 20%;
     font-size: 35px;
 }
 #des_artigo{
-    width: 70%;
-    font-size: 25px;
+    width: 90%;
+    font-size: 22px;
     vertical-align: top;
+    height: 70%;
+    
 }
 
 #seta{
@@ -48,6 +51,7 @@
     background: transparent;
     border: none;
     height: 100%;
+    width: 100%;
 }
 
 .button_preview:hover{
@@ -57,4 +61,13 @@
 
 .button_preview:focus{
     outline:0;
+}
+
+#autores_artigo{
+    font-size: 26px;
+    padding-bottom: 20px;
+}
+
+#tags_artigo{
+    font-size:20px;
 }

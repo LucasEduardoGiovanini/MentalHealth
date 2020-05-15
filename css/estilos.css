@@ -38,6 +38,7 @@ body{
     opacity: 0;
     animation: blink 9s infinite;
     animation-delay: 0.5s;
+    height: 50%;
 }
 
 @keyframes blink{

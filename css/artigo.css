@@ -5,6 +5,10 @@
     width: 75%;
 }
 
+#table_artigo{
+    width: 100%;
+}
+
 #titulo_artigo{
     font-size: 50px;
     text-align: center;
@@ -18,13 +22,22 @@
     padding-bottom: 20px;
 }
 
+#data_artigo{
+    width: 100px;
+}
+
+#tags_artigo{
+    font-size: 20px;
+}
+
 #corpo_artigo{
     font-size: 30px;
     text-align: justify;
 }
 
 #caixa_cinza{
-    background-color: rgba(233, 230, 230, 0.767);
+    /*background-color: rgba(233, 230, 230, 0.767);*/
+    background-color: rgb(238, 238, 238);
     padding: 50px;
     
     
