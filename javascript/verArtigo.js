@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
   $(".button_preview").click(function () {
     var id_artigo = $(this).attr("value");
     document.body.scrollTop = 0;
@@ -38,5 +39,14 @@ $(document).ready(function () {
     $("#id_artigo").html("Id:"+id);
     $("#tags_artigo").html(tags);
     $("#ref_artigo").html(referencias);
+
+    if($("#right_side").attr("value") == 1){
+      $("#caixa_cinza").prepend("<button id = \"edit_artigo\">Editar</button>");
+
+      var script2 = document.createElement("script");
+      script2.type = "text/javascript";
+      script2.src = "../javascript/editar.js"; 
+      document.getElementsByTagName("head")[0].appendChild(script2);
+    }
   
   } 

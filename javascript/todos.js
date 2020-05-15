@@ -2,7 +2,6 @@ $(document).ready(function () {
   $("#div_texto").load("inicio.html"); 
   enableStylesheet(document.getElementById("css_inicio"));
   
-
     $("#sobre").click(function () {
       document.body.scrollTop = 0;
       document.getElementById("novo").style.animation = "first ease 0.5s";
@@ -16,8 +15,6 @@ $(document).ready(function () {
     }, 800);  
     });  
 
-
-    
 
     $("#inicio").click(function () {
       document.body.scrollTop = 0;
@@ -55,13 +52,12 @@ $(document).ready(function () {
       }, 300);
     });
 
-    
-    
-    
+
     setTimeout(changeText, 500);
   });
 
 window.onscroll = function() {scrollFunction()};
+
 
 
 function scrollFunction() {

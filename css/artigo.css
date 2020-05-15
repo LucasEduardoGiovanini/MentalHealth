@@ -22,8 +22,10 @@
     padding-bottom: 20px;
 }
 
-#data_artigo{
+#data_artigo, #id_artigo{
+    font-size: 20px;
     width: 100px;
+    padding-left: 40px;
 }
 
 #tags_artigo{
@@ -39,7 +41,18 @@
     /*background-color: rgba(233, 230, 230, 0.767);*/
     background-color: rgb(238, 238, 238);
     padding: 50px;
-    
-    
-    
 }
+
+#edit_artigo{
+    background-color: rgb(153, 153, 153);
+    margin-top: 5px;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+#edit_artigo:hover{
+    background-color: rgb(175, 175, 175);
+}
+    
