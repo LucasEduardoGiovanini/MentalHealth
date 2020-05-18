@@ -259,12 +259,12 @@ body{
     }
   }
 
-#inputs_login, #Cinputs_login{
+#inputs_login, #Cinputs_login, #Einputs{
     margin-left:auto;
     margin-right:auto;
 }
 
-#username, #password,#usernameA, #passwordA, #Cusername,#Cpassword{
+#username, #password,#usernameA, #passwordA, #Cusername,#Cpassword, #Eusername{
     padding: 12px 20px;
     margin: 4px 0;
     display: inline-block;
@@ -272,7 +272,7 @@ body{
     width: 250px;
 }
 
-#inputs_login tr td button, #Cinputs_login tr td button{
+#inputs_login tr td button, #Cinputs_login tr td button, #Einputs tr td button{
     background-color: rgb(153, 153, 153);
     margin-top: 5px;
     color: white;

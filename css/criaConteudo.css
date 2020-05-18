@@ -74,6 +74,11 @@
     border: none;
     cursor: pointer;
 }
+
+#Bcriar:hover, #Batualizar:hover{
+    background-color: rgb(175, 175, 175);
+}
+
 #Bdeletar{
     background-color: rgb(173, 41, 41);
     margin-top: 5px;
@@ -83,6 +88,6 @@
     cursor: pointer;
     float: right;
 }
-#Bcriar:hover, #Batualizar:hover{
-    background-color: rgb(175, 175, 175);
+#Bdeletar:hover{
+    background-color: rgb(170, 68, 68);
 }
