@@ -40,6 +40,16 @@ $(document).ready(function () {
     $("#tags_artigo").html(tags);
     $("#ref_artigo").html(referencias);
 
+
+    setTimeout(function (){
+      var script2 = document.createElement("script");
+      script2.type = "text/javascript";
+      script2.src = "../javascript/favoritar.js"; 
+      document.getElementsByTagName("head")[0].appendChild(script2);
+
+    }, 300);
+
+   
     if($("#right_side").attr("value") == 1){
       $("#caixa_cinza").prepend("<button id = \"edit_artigo\">Editar</button>");
 
@@ -48,5 +58,7 @@ $(document).ready(function () {
       script2.src = "../javascript/editar.js"; 
       document.getElementsByTagName("head")[0].appendChild(script2);
     }
+
+
   
   } 

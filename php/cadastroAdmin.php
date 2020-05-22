@@ -32,6 +32,7 @@ if($var){
 
     $account->addChild("login", $login);
     $account->addChild("senha", $senha);
+    $account->addChild("favoritos", " ");
     
     $xml->asXML("../LoginSenhaAdmin.xml");
     
