@@ -3,6 +3,7 @@ $(document).ready(function () {
 
   $(".button_preview").click(function () {
     var id_artigo = $(this).attr("value");
+
     document.body.scrollTop = 0;
       document.getElementById("novo").style.animation = "first ease 0.5s";
       setTimeout(function (){
@@ -24,6 +25,25 @@ $(document).ready(function () {
       
         });
 
+      }, 800);
+      
+
+      setTimeout(function (){
+        $.ajax({
+          type: "POST",
+          dataType: "json",
+          url: "../php/confereFavorito.php",
+          data: {
+                idxml: id_artigo,
+                loginxml: $("#nome_user").text()
+               },
+          
+          success: function (retorno) {
+            $("#favorito").attr("value",1);
+            $("#favorito").html("<img src=\"../Imagens/star_fav_on.png\" alt=\"\">");
+          }
+      
+        });
       }, 800);
       
 

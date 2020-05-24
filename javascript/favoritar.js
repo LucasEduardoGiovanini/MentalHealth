@@ -3,15 +3,15 @@ $("#favorito").click(function () {
         alert("faça login para favoritar um conteúdo!");
         
     }
-    else if($("#nome_user").attr("value") == 1){
-        $("#nome_user").attr("value",0);
+    else if($("#favorito").attr("value") == 1){
+        $("#favorito").attr("value",0);
         $.ajax({
             type: "POST",
             dataType: "json",
             url: "../php/desfavoritar.php",
             data: {
                 loginxml: $("#nome_user").text(),
-                idxml: $("#id_artigo").text()
+                idxml: $("#id_artigo").text().replace("Id:","")
             },
             success: function (retorno) {
                 $("#favorito").html("<img src=\"../Imagens/star_fav_off.png\" alt=\"\">");
@@ -23,14 +23,14 @@ $("#favorito").click(function () {
         });
     }
     else{
-        $("#nome_user").attr("value",1);
+        $("#favorito").attr("value",1);
         $.ajax({
             type: "POST",
             dataType: "json",
             url: "../php/favoritar.php",
             data: {
                 loginxml: $("#nome_user").text(),
-                idxml: $("#id_artigo").text()
+                idxml: $("#id_artigo").text().replace("Id:","")
             },
             success: function (retorno) {
                 $("#favorito").html("<img src=\"../Imagens/star_fav_on.png\" alt=\"\">");
