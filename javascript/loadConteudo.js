@@ -7,14 +7,11 @@ $(document).ready(function () {
     },
     
     success: function (retorno) {
-      var publicacoes = [];
-      
       $("#div_texto").append("<div id =\"novo\" > </novo>");
       for ($i = 1; $i <= retorno[0].qnt; $i++) { // para cada linha da matriz de retorno, adiciona  uma nova linha com os dados desse email
-        publicacoes.push(retorno[$i])// adiciono a publicacao do momento na minha lista com todas as publicacoes
+      
         criar(retorno[$i].titulo,retorno[$i].id, retorno[$i].descricao, retorno[$i].autores,retorno[$i].tags);  
       }
-      sessionStorage.setItem(publicacoes,1)//armazeno essa lista de conteudos para chama-la em filtraConteudo.js
     }
 
   });

@@ -1,9 +1,7 @@
 $(document).ready(function () {
 
-    function filter(){
-        var barra_pesquisa;
-        barra_pesquisa = document.getElementById("barra_pesquisa").nodeValue;//pego o que foi inserido na barra de busca para realizar a filtragem.
-   
+    function filter(barra_pesquisa){
+        
         var todos_conteudos;
         var lista_id;
         var lista_similaridades;
