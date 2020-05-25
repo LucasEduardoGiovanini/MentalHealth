@@ -36,7 +36,7 @@ body{
     font-size: 70px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     opacity: 0;
-    animation: blink 9s infinite;
+    animation: blink 9.4s infinite;
     animation-delay: 0.5s;
     height: 50%;
 }

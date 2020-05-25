@@ -71,7 +71,7 @@ $(document).ready(function () {
 
    
     if($("#right_side").attr("value") == 1){
-      $("#caixa_cinza").prepend("<button id = \"edit_artigo\">Editar</button>");
+      $("#caixa_cinza").prepend("<button id = \"edit_artigo\"><img src=\"../Imagens/edit.png\" alt=\"\"></button>");
 
       var script2 = document.createElement("script");
       script2.type = "text/javascript";

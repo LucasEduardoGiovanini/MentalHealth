@@ -102,6 +102,8 @@ function addScript(){
 var texts = new Array();
     texts.push("Saber ouvir é saber cuidar");
     texts.push("Dê voz a quem precisa de você");
+    texts.push("Todas as vidas importam");
+    texts.push("Sempre é possível recomeçar");
     texts.push("Não é frescura");
 
 var point = 0;
