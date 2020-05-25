@@ -3,6 +3,7 @@ $(document).ready(function () {
 
   $(".button_preview").click(function () {
     var id_artigo = $(this).attr("value");
+
     document.body.scrollTop = 0;
       document.getElementById("novo").style.animation = "first ease 0.5s";
       setTimeout(function (){
@@ -27,6 +28,25 @@ $(document).ready(function () {
       }, 800);
       
 
+      setTimeout(function (){
+        $.ajax({
+          type: "POST",
+          dataType: "json",
+          url: "../php/confereFavorito.php",
+          data: {
+                idxml: id_artigo,
+                loginxml: $("#nome_user").text()
+               },
+          
+          success: function (retorno) {
+            $("#favorito").attr("value",1);
+            $("#favorito").html("<img src=\"../Imagens/star_fav_on.png\" alt=\"\">");
+          }
+      
+        });
+      }, 800);
+      
+
   });
 
   });
@@ -40,13 +60,25 @@ $(document).ready(function () {
     $("#tags_artigo").html(tags);
     $("#ref_artigo").html(referencias);
 
+
+    setTimeout(function (){
+      var script2 = document.createElement("script");
+      script2.type = "text/javascript";
+      script2.src = "../javascript/favoritar.js"; 
+      document.getElementsByTagName("head")[0].appendChild(script2);
+
+    }, 300);
+
+   
     if($("#right_side").attr("value") == 1){
-      $("#caixa_cinza").prepend("<button id = \"edit_artigo\">Editar</button>");
+      $("#caixa_cinza").prepend("<button id = \"edit_artigo\"><img src=\"../Imagens/edit.png\" alt=\"\"></button>");
 
       var script2 = document.createElement("script");
       script2.type = "text/javascript";
       script2.src = "../javascript/editar.js"; 
       document.getElementsByTagName("head")[0].appendChild(script2);
     }
+
+
   
   } 

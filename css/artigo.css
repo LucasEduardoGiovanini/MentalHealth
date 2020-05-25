@@ -47,12 +47,35 @@
     background-color: rgb(153, 153, 153);
     margin-top: 5px;
     color: white;
-    padding: 14px 20px;
-    border: none;
+    padding: 6px;
+    border: 1px solid black;
     cursor: pointer;
     float: right;
 }
+
 #edit_artigo:hover{
     background-color: rgb(175, 175, 175);
+}
+
+#edit_artigo img{
+    width: 30px;
+    height: 30px;
+}
+
+#favorito{
+    background-color: rgb(153, 153, 153);
+    margin-top: 5px;
+    color: white;
+    padding: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    float: right;
+    width: 44px;
+    height: 44px;
+}
+
+#favorito img{
+    width: 20px;
+    height: 20px;
 }
     
