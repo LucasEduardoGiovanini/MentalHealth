@@ -1,61 +1,103 @@
 $(document).ready(function () {
 
-    function filter(){
-        var barra_pesquisa;
-        barra_pesquisa = document.getElementById("barra_pesquisa").nodeValue;//pego o que foi inserido na barra de busca para realizar a filtragem.
-   
-        var todos_conteudos;
-        var lista_id;
-        var lista_similaridades;
+    var barra_pesquisa;
+   barra_pesquisa= $("#pesquisa").val();
+    //barra_pesquisa = document.getElementById("barra_pesquisa").nodeValue;//pego o que foi inserido na barra de busca para realizar a filtragem.
 
-        lista_id =[];
-        lista_similaridades = [];
-        todos_conteudos = sessionStorage.getItem(publicacoes)//pego o array com todas as publicações dentro de loadConteudo.js
-        for ($i=0;$i<todos_conteudos.length;$i++){
+   $.ajax({
+    type: "POST",
+    dataType: "json",
+    url: "../php/lerarquivos.php",
+    data: {
+    },
+    success: function (retorno) {
+        console.log("Funcionou");
+        var dict = {};
+        for ($i = 0; $i < retorno[0].qnt; $i++) { // para cada linha da matriz de retorno, adiciona  uma nova linha com os dados desse email
+                dict[$i] = retorno[$i+1].tags;
+              }
 
-            lista_id.push(todos_conteudos[$i].id)//conjunto de tags de x publicação ocupa x posicação na minha lista
-            lista_similaridades.push(LevenshteinDistance(barra_pesquisa,todos_conteudos[$i].tags)) //armazeno na minha lista a similaridade entre a tag daquela publicação como texto dado pelo usuário.         
-        } 
+           for ($i = 0; $i < Object.keys(dict).length; $i++){ //pegamos a similaridade de cada arquivo e sobreescrevemos seu valor das tags pela sua similaridade calculada.
 
-        //agora busca-se com a variavel "valores_separados_de_pesquisa" a maior similaridade dentro da lista "lista_counteudos".
-        //quando acharmos a maior similaridades, buscaremos pela publicação na lista de IDS, já que ambas tem o mesmo tamanho e as mesmas posições.
+                dict[$i] = similarity(barra_pesquisa,dict[$i]);
+
+           }
+           var keyValues = [];
+
+           for (var key in dict) {
+              keyValues.push([ key, dict[key] ])
+            }
+            keyValues.sort(function compare(kv1, kv2) {
+
+              return kv2[1] - kv1[1]
+            });
+            console.log(keyValues);
+        setTimeout(function (){
+        $("#div_texto").append("<div id =\"novo\" > </novo>");
+
+        for ($i = 0; $i <= Object.keys(dict).length;  $i++) { // para cada linha da matriz de retorno, adiciona  uma nova linha com os dados desse email
+
+            criar(retorno[parseInt(keyValues[$i][0])+1].titulo,retorno[parseInt(keyValues[$i][0])+1].id, retorno[parseInt(keyValues[$i][0])+1].descricao,
+                retorno[parseInt(keyValues[$i][0])+1].autores,retorno[parseInt(keyValues[$i][0])+1].tags);
+          }
+      }, 1000);
+    },
+    });
+
+   function criar(titulo, id, descricao, autor, tags) {
+            $("#novo").append("<div id=\"Caixa_Artigo\"> <button class=\"button_preview\" value=" + id +"><table id=\"preview_artigo\"><tr>               <td rowspan=\"6\" id=\"img_artigo\"> </td>                <td id=\"titulo_artigo\"> " + titulo + "</td>                <td rowspan=\"6\"> <img src=\"../Imagens/seta.png\" id=\"seta\"> </td>            </tr>            <tr>                <td id=\"autores_artigo\">"+ "por: " + autor +"</td>            </tr>            <tr>                <td id=\"des_artigo\"> "+ descricao +"</td>            </tr>            <tr>                <td id = \"tags_artigo\">" + tags + " </td>            </tr>        </table>    </button> </div>");
+          }
+
+          function addScript(){
+            setTimeout(function() {
+              var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "../javascript/verArtigo.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+            },500)
+          }
+
+
+    function similarity(s1, s2) {
+      var longer = s1;
+      var shorter = s2;
+      if (s1.length < s2.length) {
+        longer = s2;
+        shorter = s1;
+      }
+      var longerLength = longer.length;
+      if (longerLength == 0) {
+        return 1.0;
+      }
+      return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
     }
-    
-    
-    (function () { //compara a similaridade entre 2 strings
-        LevenshteinDistance =  function(a, b){
-            if(a.length == 0) return b.length; 
-            if(b.length == 0) return a.length; 
 
-            var matrix = [];
 
-            // increment along the first column of each row
-            var i;
-            for(i = 0; i <= b.length; i++){
-                matrix[i] = [i];
+    function editDistance(s1, s2) {
+      s1 = s1.toLowerCase();
+      s2 = s2.toLowerCase();
+
+      var costs = new Array();
+      for (var i = 0; i <= s1.length; i++) {
+        var lastValue = i;
+        for (var j = 0; j <= s2.length; j++) {
+          if (i == 0)
+            costs[j] = j;
+          else {
+            if (j > 0) {
+              var newValue = costs[j - 1];
+              if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                newValue = Math.min(Math.min(newValue, lastValue),
+                  costs[j]) + 1;
+              costs[j - 1] = lastValue;
+              lastValue = newValue;
             }
+          }
+        }
+        if (i > 0)
+          costs[s2.length] = lastValue;
+      }
+      return costs[s2.length];
+    }
 
-            // increment each column in the first row
-            var j;
-            for(j = 0; j <= a.length; j++){
-                matrix[0][j] = j;
-            }
-
-            // Fill in the rest of the matrix
-            for(i = 1; i <= b.length; i++){
-                for(j = 1; j <= a.length; j++){
-                if(b.charAt(i-1) == a.charAt(j-1)){
-                    matrix[i][j] = matrix[i-1][j-1];
-                } else {
-                    matrix[i][j] = Math.min(matrix[i-1][j-1] + 1, // substitution
-                                            Math.min(matrix[i][j-1] + 1, // insertion
-                                                    matrix[i-1][j] + 1)); // deletion
-                }
-                }
-            }
-
-        return matrix[b.length][a.length];
-    };
-})();
-
-});
+    });

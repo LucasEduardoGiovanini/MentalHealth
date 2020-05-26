@@ -30,6 +30,22 @@ $(document).ready(function () {
             }, 800);
     });
 
+
+    $("#Bpesquisar").click(function () {
+      //alert($("#pesquisa").val());
+      document.body.scrollTop = 0;
+      document.getElementById("novo").style.animation = "first ease 0.5s";
+      setTimeout(function (){
+
+        enableStylesheet(document.getElementById("css_pagArtigos"));
+        disableStylesheet(document.getElementById("css_sobre"));
+        disableStylesheet(document.getElementById("css_artigo"));
+        disableStylesheet(document.getElementById("css_inicio"));
+        $("#div_texto").html(" ");
+        addScriptPesquisa();
+            }, 800);
+    });
+
     $("#artigos").click(function () { 
       document.body.scrollTop = 0;
       document.getElementById("novo").style.animation = "first ease 0.5s";
@@ -97,6 +113,14 @@ function addScript(){
   script.src = "../javascript/verArtigo.js"; 
   document.getElementsByTagName("head")[0].appendChild(script);
   },500)  
+}
+
+function addScriptPesquisa(){
+  var script2 = document.createElement("script");
+  script2.type = "text/javascript";
+  script2.src = "../javascript/filtraConteudo.js";
+  document.getElementsByTagName("head")[0].appendChild(script2);
+
 }
 
 var texts = new Array();
