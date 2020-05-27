@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $("#Bfav").click(function () { 
         document.body.scrollTop = 0;
-      document.getElementById("novo").style.animation = "first ease 0.5s";
+      document.getElementById("novo").style.animation = "first ease 0.8s";
       setTimeout(function (){
         enableStylesheet(document.getElementById("css_pagArtigos"));
         disableStylesheet(document.getElementById("css_sobre"));

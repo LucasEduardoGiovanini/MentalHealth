@@ -4,7 +4,8 @@ $(document).ready(function () {
   
     $("#sobre").click(function () {
       document.body.scrollTop = 0;
-      document.getElementById("novo").style.animation = "first ease 0.5s";
+      document.getElementById("novo").style.animation = "first ease 0.8s";
+
 
       setTimeout(function (){
         enableStylesheet(document.getElementById("css_sobre"));
@@ -12,13 +13,15 @@ $(document).ready(function () {
         disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_pagArtigos"));
       $("#div_texto").load("sobre.html");    
+      
     }, 800);  
+    
     });  
 
 
     $("#inicio").click(function () {
       document.body.scrollTop = 0;
-      document.getElementById("novo").style.animation = "first ease 0.5s";
+      document.getElementById("novo").style.animation = "first ease 0.8s";
       setTimeout(function (){
         
         enableStylesheet(document.getElementById("css_inicio"));
@@ -34,7 +37,7 @@ $(document).ready(function () {
     $("#Bpesquisar").click(function () {
       //alert($("#pesquisa").val());
       document.body.scrollTop = 0;
-      document.getElementById("novo").style.animation = "first ease 0.5s";
+      document.getElementById("novo").style.animation = "first ease 0.8s";
       setTimeout(function (){
 
         enableStylesheet(document.getElementById("css_pagArtigos"));
@@ -48,13 +51,14 @@ $(document).ready(function () {
 
     $("#artigos").click(function () { 
       document.body.scrollTop = 0;
-      document.getElementById("novo").style.animation = "first ease 0.5s";
+      document.getElementById("novo").style.animation = "first ease 0.8s";
       setTimeout(function (){
         enableStylesheet(document.getElementById("css_pagArtigos"));
         disableStylesheet(document.getElementById("css_sobre"));
         disableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_inicio"));
         $("#div_texto").html(" ");
+        $("#div_texto").append("<div id =\"novo\" > </novo>");
         addScript();
 
         

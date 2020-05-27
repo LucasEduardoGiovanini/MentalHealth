@@ -22,9 +22,15 @@
     font-size: 20px;
     color: white;
     text-shadow: 0 0 5px black;
-    stroke: black;
+    stroke: black;      
 }
 
+
+.caixa_texto{
+    background-color:rgba(0, 0, 0, 0.199);
+    padding: 20px;
+    backdrop-filter: blur(2px);
+}
 
 #video_1{
     padding-top: 40px;

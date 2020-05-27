@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $("#addArtigo").click(function () { 
         document.body.scrollTop = 0;
-        document.getElementById("novo").style.animation = "first ease 0.5s";
+        document.getElementById("novo").style.animation = "first ease 0.8s";
         setTimeout(function (){
     
           enableStylesheet(document.getElementById("cria_conteudo"));

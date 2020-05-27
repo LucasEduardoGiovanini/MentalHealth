@@ -7,7 +7,7 @@ $(document).ready(function () {
     },
     
     success: function (retorno) {
-      $("#div_texto").append("<div id =\"novo\" > </novo>");
+      
       for ($i = 1; $i <= retorno[0].qnt; $i++) { // para cada linha da matriz de retorno, adiciona  uma nova linha com os dados desse email
       
         criar(retorno[$i].titulo,retorno[$i].id, retorno[$i].descricao, retorno[$i].autores,retorno[$i].tags);  

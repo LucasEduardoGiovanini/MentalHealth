@@ -5,7 +5,7 @@ $(document).ready(function () {
     var id_artigo = $(this).attr("value");
 
     document.body.scrollTop = 0;
-      document.getElementById("novo").style.animation = "first ease 0.5s";
+      document.getElementById("novo").style.animation = "first ease 0.8s";
       setTimeout(function (){
         enableStylesheet(document.getElementById("css_artigo"));
         disableStylesheet(document.getElementById("css_sobre"));
