@@ -1,6 +1,11 @@
 $(document).ready(function () {
   $("#div_texto").load("inicio.html"); 
   enableStylesheet(document.getElementById("css_inicio"));
+
+
+  $("#titulo").click(function () { 
+    window.location.reload();
+  });
   
     $("#sobre").click(function () {
       document.body.scrollTop = 0;

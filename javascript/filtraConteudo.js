@@ -41,6 +41,8 @@ $(document).ready(function () {
                 retorno[parseInt(keyValues[$i][0])+1].autores,retorno[parseInt(keyValues[$i][0])+1].tags);
           }
       }, 1000);
+      setTimeout(function (){addScript();}, 1500);
+      
     },
     });
 

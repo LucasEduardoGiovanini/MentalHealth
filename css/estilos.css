@@ -108,7 +108,20 @@ body{
     font-family: fantasy;
     font-size: 35px;
     text-align: left;
-    width:600px;
+    width:200px;
+    border-radius: 20px;
+    padding: 16px;
+    padding-top: 8px;
+    padding-left: 100px;
+   
+}
+
+#titulo:hover{
+    cursor: pointer;
+}
+
+#space{
+    width:400px;
     border-radius: 20px;
     padding: 16px;
     padding-top: 8px;

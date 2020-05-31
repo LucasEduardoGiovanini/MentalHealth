@@ -7,7 +7,7 @@
 
 
 #titulo_texto{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Roboto', serif;
     font-size: 45px;
     font-weight: bolder;
     text-align: left;
@@ -18,7 +18,7 @@
 .texto{
     text-align: justify;
     text-justify: inter-word;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', serif;
     font-size: 20px;
     color: white;
     text-shadow: 0 0 5px black;
@@ -26,8 +26,12 @@
 }
 
 
+#content{
+    align-items: center;
+}
+
 .caixa_texto{
-    background-color:rgba(0, 0, 0, 0.199);
+    background-color:rgba(0, 0, 0, 0.24);
     padding: 20px;
     backdrop-filter: blur(2px);
 }
