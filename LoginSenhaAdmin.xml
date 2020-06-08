@@ -5,7 +5,7 @@
         <senha>$2y$10$3rEw2TTNQcmzOApJ5u4A0eee2gZ8TfqLo4af3HcGJPy8y3zt4fRmS</senha>
         <favoritos>
             
-        <favorito>3</favorito></favoritos>
+        <favorito>3</favorito><favorito>1</favorito></favoritos>
     </user>
     <user>
         <login>adm_lucas</login>

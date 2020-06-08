@@ -265,7 +265,7 @@ body{
     }
   }
 
-#inputs_login, #Cinputs_login, #Einputs{
+#inputs_login, #Cinputs_login, #Einputs, #Dinputs{
     margin-left:auto;
     margin-right:auto;
 }
@@ -276,6 +276,15 @@ body{
     display: inline-block;
     border: 1px solid #ccc;
     width: 250px;
+}
+
+#duvida_corpo{
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 250px;
+    height: 150px;
 }
 
 #inputs_login tr td button, #Cinputs_login tr td button, #Einputs tr td button{
@@ -315,4 +324,14 @@ body{
 #BloginAdmin{
     padding: 20px;
     width: 100%;
+}
+
+
+#Denviar{
+    background-color: rgb(153, 153, 153);
+    margin-top: 5px;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
 }

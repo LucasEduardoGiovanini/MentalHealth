@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+  $("#Denviar").click(function () { 
+    alert("Pergunta enviada. Você receberá um email com a resposta em alguns dias!");
+
+  });
+
     $("#Bfav").click(function () { 
         document.body.scrollTop = 0;
       document.getElementById("novo").style.animation = "first ease 0.8s";
@@ -28,14 +33,8 @@ $(document).ready(function () {
                 criar(retorno[$i].titulo,retorno[$i].id, retorno[$i].descricao, retorno[$i].autores,retorno[$i].tags);  
               }
           }, 1000);
-
-          
         }
-    
       });
-
-
-
       });
 
    

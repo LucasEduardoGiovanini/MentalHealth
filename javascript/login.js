@@ -84,6 +84,7 @@ function addScript2(){
         script.type = "text/javascript";
         script.src = "../javascript/lerFavoritos.js"; 
         document.getElementsByTagName("head")[0].appendChild(script);
+        
     },500);
 
   }

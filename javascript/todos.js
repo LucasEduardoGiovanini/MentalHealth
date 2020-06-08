@@ -77,9 +77,6 @@ $(document).ready(function () {
       }, 300);
     });
 
-    
-
-
     setTimeout(changeText, 500);
   });
 
